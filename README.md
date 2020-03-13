@@ -25,52 +25,51 @@ Abaixo está o modelo relacional da base de dados, onde se tem uma visão geral 
 ![](https://github.com/MarcosJuunioor/ambulatorial-csmo/blob/master/MR%20atual.png)
 
 ## Aplicações e Funcionalidades
-Neste tópico, cada grupo de aplicação será explanado de maneira resumida, indicando as
-funcionalidades de suas respectivas aplicações.
-- Consulta para atualização de cadastro de pacientes
+Neste tópico, cada grupo de aplicações será explanado de maneira resumida, indicando as suas respectivas funcionalidades.
+- Consulta para atualização de cadastro de pacientes <br>
 Contém uma aplicação de controle (por meio da qual o paciente pode ser pesquisado pelo nome) e
 cinco formulários de atualização dos dados do paciente, sendo um formulário pai (paciente) e
 quatro filhos (servidor, terceirizado, aluno e visitante).
-- Consulta para atualização de cadastro de servidores da saúde
+- Consulta para atualização de cadastro de servidores da saúde <br>
 Contém uma aplicação de controle (por meio da qual o servidor da saúde pode ser pesquisado pelo
 nome ou siape) e um formulário de atualização dos dados do servidor.
-- Controle de Atendimentos
+- Controle de Atendimentos <br>
 Possui um formulário e uma grid. O primeiro serve para cadastrar atendimentos realizados por
 médicos, enfermeiros ou dentistas, onde se define o tipo de atendimento, o procedimento realizado
 e o tipo de paciente atendido. Já a grid é útil para se fazer consultas e relatórios relacionados aos
 atendimentos realizados. Por exemplo, é possível obter-se o número de alunos que fizeram aferição
 de pressão arterial em um determinado intervalo de tempo.
-- Emissão de Documentos
+- Emissão de Documentos <br>
 Contém aplicações de controle e pdf report usadas para criação de diversos documentos decorrentes
 do serviço médico/odontológico, tais quais: atestados, declarações, licenças, receituários e ficha de
 acompanhamento.
-- Formulários de Cadastro
+- Formulários de Cadastro <br>
 Possui os formulários para cadastro dos pacientes (servidor, aluno, terceirizado e visitante) e dos
 servidores da saúde (usuários).
-- Login
+- Login <br>
 Tem a aplicação de login e mais outras quatro referentes à atualização de senha, que são:
-blank_envio, control_email, control_codigo e control_atualizar_senha.
-blank_envio: possui o código php executado para que um token seja enviado ao e-mail do usuário.
-control_email: aplicação de controle que recebe o e-mail para onde o código de recuperação de
-senha será enviado. Obs: É verificado se o e-mail está cadastrado no sistema.
-control_codigo: após enviado o e-mail com o token de recuperação da senha, o mesmo será
-solicidado nesta aplicação de controle. Também é feita a verificação se o código é válido.
-control_atualizar_senha: nesta aplicação de controle, o usuário deve digitar sua nova senha para
+blank_envio, control_email, control_codigo e control_atualizar_senha. <br>
+blank_envio: possui o código php executado para que um token seja enviado ao e-mail do usuário. <br>
+control_email: aplicação de controle que recebe o e-mail para onde o código de recuperação de 
+senha será enviado. **Obs**: É verificado se o e-mail está cadastrado no sistema. <br>
+control_codigo: após enviado o e-mail com o token de recuperação da senha, o mesmo será 
+solicidado nesta aplicação de controle. Também é feita a verificação se o código é válido. <br>
+control_atualizar_senha: nesta aplicação de controle, o usuário deve digitar sua nova senha para 
 que ocorra a atualização (após os passos anteriores).
-- Menu
+- Menu <br>
 Possui a aplicação de menu (que contém os botões para acesso a todas as outras aplicações) e duas
 aplicações de controle usadas para alteração do e-mail do usuário.
-- Odontograma
+- Odontograma <br>
 Contém uma aplicação de controle (para pesquisar o odontograma do paciente através do seu nome)
 e duas blanks: odontograma_back_end e odontograma_inclusao. A primeira possui o código php
 que realiza as transações com o banco de dados e operações relacionadas ao modelo de negócio, e
 também recebe as requisições para criação de novos registros relacionados ao paciente. Já a
 segunda tem o código de front-end, que é responsável por criar o odontograma dinamicamente,
-assim como os botões, tabelas e outros elementos apresentados ao usuário.
-OBS: Para entender o código tanto de front quanto de back-end, é necessário saber como funciona
+assim como os botões, tabelas e outros elementos apresentados ao usuário. <br>
+**Obs**: Para entender o código tanto de front quanto de back-end, é necessário saber como funciona
 um odontograma. Por isso, para uma possível manutenção futura, o programador deve procurar se
 informar a respeito do assunto. Toda a codificação está comentada.
-- Prontuário
+- Prontuário <br>
 Agrupa as aplicações que compõem o prontuário de um paciente. Tem-se a aplicação principal
 “form_prontuario”, que é o mestre, e várias outras que são filhas ou detalhes dessa aplicação. O
 mestre contém as informações gerais do paciente (como nome, data de nascimento etc.), e o seu
